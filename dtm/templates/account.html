@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+    <div class="media">
+        <div class="media-body">
+            <h2 class="account-heading">{{ current_user.username }}</h2>
+            <p class="text-secondary">{{ current_user.email }}</p>
+        </div>
+    </div>
+    <form method="POST" action="" enctype="multipart/form-data"> 
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <legend class="border-buttom mb-4">Account Info</legend>
+            <div class="form-group">
+                {{ form.username.label(class="form-control-label") }}
+
+                {% if form.username.errors %}
+                    {{ form.username(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.username.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.username(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+            <div class="form-group">
+                {{ form.email.label(class="form-control-label") }}
+
+                {% if form.email.errors %}
+                    {{ form.email(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.email(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+            <div class="form-group">
+                {{ form.phoneNumber.label(class="form-control-label") }}
+
+                {% if form.phoneNumber.errors %}
+                    {{ form.phoneNumber(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.phoneNumber.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.phoneNumber(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+            <div class="form-group">
+                {{ form.address.label(class="form-control-label") }}
+
+                {% if form.address.errors %}
+                    {{ form.address(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.address.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.address(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+            
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+    </form>
+</div>
+{% endblock content%}
+{% block drones_sidebar%}
+<div class="col-md-4">
+    <div class="content-section">
+        <h3>Options</h3>
+        <p class='text-muted'>
+        <ul class="list-group">
+            <a class="list-group-item list-group-item-light" href="{{ url_for('drones_route') }}">Register a Drone</a>
+            <a class="list-group-item list-group-item-light" href="#">Edit a Drone Information</a>
+            <a class="list-group-item list-group-item-light" href="#">Remove a Drone</a>
+        </ul>
+        </p>
+    </div>
+    <div class="content-section">
+        <h3>Registered Drones</h3>
+        <p class='text-muted'>
+        <ul class="list-group">
+            {% if drones %}
+                {% for drone in drones %}
+                    <a class="list-group-item list-group-item-action">
+                        <h6><b>{{drone.type}} {{drone.brand}}</b> ({{drone.weight}} kg)</h6>
+                        <h6>LcnsID: {{drone.droneLicenseID}} | exp: {{drone.droneLicenseExpDate.date()}}</h6>
+                    </a>
+                {% endfor %}
+            {% else %}
+            <h6>Empty</h6>
+        {% endif%}
+        </ul>
+        </p>
+    </div>
+
+</div>
+{% endblock drones_sidebar%}

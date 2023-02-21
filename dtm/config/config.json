@@ -1,0 +1,26 @@
+{
+    "ADMINS": [
+        {
+            "username": "admin",
+            "email": "admin@dtm.com",
+            "password": "admin"
+        }
+    ],
+
+    "SECRET_KEY": "Generate a SECRET_KEY and add it here",
+
+    "LOCAL_MONGO_URI": "mongodb://<localhost>:<port>/<db_name>",
+    "ATLAS_MONGO_URI": "<your_atlas_mongo_uri>",
+    "STITCH_APP_ID": "<your_stitch_app_id>",
+    "DATABASE_NAME": "<db_name>",
+
+    "MAPBOX_ACCESS_TOKEN": "<mabbox_access_token>",
+    "MAPBOX_STYLE": "<mapbox_style>",
+
+    "BROKER_ADDRESS": "<broker_address>",
+    "BROKER_PORT": <broker_port>,
+    "BROKER_CLIENT_USERNAME": "<broker_client_usr_name>",
+    "BROKER_CLIENT_PASSWORD": "<broker_client_password>"
+
+
+}

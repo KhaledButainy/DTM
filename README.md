@@ -18,17 +18,17 @@ git clone https://github.com/KhaledButainy/DTM.git
 * It is recommended that you create a new environment and install all the requirements there. Create a new conda environment using the following command:
 
 ```
-$ conda create --name <myenv>
+conda create --name <myenv>
 ```
 * Replace <myenv> with whatever name you like. Then activate the environment using the following command:
 
 ```
-$ conda activate <mynenv>
+conda activate <mynenv>
 ```
 * Now you need to install the requirements inside this environment. Use the following command to do so:
 
 ```
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ### Configuration

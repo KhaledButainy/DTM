@@ -78,10 +78,6 @@ python3 run.py
 * [Bootstrap](https://getbootstrap.com/) - The styling library that was used
 * [MongoDB](https://www.mongodb.com/) - The database that we used for NoSQL objects and data streaming.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
 ## Acknowledgments
 
 * [PathPlanning](https://github.com/zhm-real/PathPlanning) - Used to find the path and upload it to the drone.

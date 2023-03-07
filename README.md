@@ -1,4 +1,4 @@
-# DTM - Drone's Traffic Management System
+# DTM - Drones' Traffic Management System
 
 This repository contains the web application for the Drone Traffic Management system. The project is my Senior Design Project which was presented as a requirement for the Computer Engineering program at KFUPM.
 

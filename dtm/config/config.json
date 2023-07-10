@@ -14,7 +14,7 @@
     "STITCH_APP_ID": "<your_stitch_app_id>",
     "DATABASE_NAME": "<db_name>",
 
-    "MAPBOX_ACCESS_TOKEN": "<mabbox_access_token>",
+    "MAPBOX_ACCESS_TOKEN": "<mapbox_access_token>",
     "MAPBOX_STYLE": "<mapbox_style>",
 
     "BROKER_ADDRESS": "<broker_address>",
